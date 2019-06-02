@@ -46,8 +46,8 @@ module.exports = withUiHook(
     return htm`
       <Page>
         <Container>
-          <Input label="Secret ID" name="secretId" value=${store.secretId || ""}/>
-          <Input label="Secret Key" name="secretKey" type="password" value=${store.secretKey || ""}/>
+          <Input label="Secret ID" name="secretId" value=${store.secretId}/>
+          <Input label="Secret Key" name="secretKey" type="password" value=${store.secretKey}/>
         </Container>
         <Container>
           <Button action="submit">Submit</Button>
