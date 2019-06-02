@@ -25,7 +25,7 @@ module.exports = withUiHook(
     if (action === "submit") {
       store.secretId = clientState.secretId;
       store.secretKey = clientState.secretKey;
-      console.log("%f %f", secretId, secretKey)
+      console.log("%s %s %s %s", store.secretId, store.secretKey, clientState.secretId, clientState.secretKey)
     }
 
     else if (action === "reset") {
