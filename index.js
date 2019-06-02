@@ -6,17 +6,44 @@ index.js
  */
 
 /*** Packages ***/
-const {withUiHook} = require("@zeit/integration-utils");
+const {withUiHook, htm} = require("@zeit/integration-utils");
 
 /*** Types ***/
-let count = 999;
+let count = 0;
 
-module.exports = withUiHook(({payload}) => {
-  count += 1;
-  return `
-    <Page>
-      <P>Counter: ${count}</P>
-      <Button>Count Me</Button>
-    </Page>
-    `;
-});
+const store = {
+  secretId: "",
+  secretKey: ""
+};
+
+module.exports = withUiHook(
+  // Take an async anonymous lambda that takes a payload
+  async ({payload}) => {
+    // Dereference the payload into a state and action
+    const {clientState, action} = payload;
+
+    if (action === "submit") {
+      store.secretId = clientState.secretId;
+      store.secretKey = clientState.secretKey;
+    }
+
+    else if (action === "reset") {
+      store.secretId = "";
+      store.secretKey = "";
+    }
+
+    return htm`
+      <Page>
+        <Container>
+          <Input label = "Secret ID" name = "secretId" value = $(store.secretId)/>
+          <Input label = "Secret Key" name = "secretKey" value = $(store.secretKey)/>
+        </Container>
+        <Container>
+          <Button action = "submit">Submit</Button>
+          <Button action = "reset">Reset</Button>
+        </Container>
+        <AutoRefresh timeout = ${3000}/>
+      </Page>
+      `;
+  }
+);
