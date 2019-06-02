@@ -40,14 +40,17 @@ module.exports = withUiHook(
     else if (action === "reset") {
       store.secretId = "";
       store.secretKey = "";
+
+      // Push these changes
+      await zeitClient.setMetadata(store);
     }
 
     // [Note] JSX does not allow spaces between properties
     return htm`
       <Page>
         <Container>
-          <Input label="Secret ID" name="secretId" value=${store.secretId}/>
-          <Input label="Secret Key" name="secretKey" type="password" value=${store.secretKey}/>
+          <Input label="Secret ID" name="secretId" value=${store.secretId || ""}/>
+          <Input label="Secret Key" name="secretKey" type="password" value=${store.secretKey || ""}/>
         </Container>
         <Container>
           <Button action="submit">Submit</Button>
