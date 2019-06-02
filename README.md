@@ -2,10 +2,14 @@
 Built for the Zeit Now Hackathon in 2019! Integrates any Now-based web app with the Contentful CMS
 
 // [Todo] Add rest of the sections here
+// [Todo] Add documentation
 
 ## Instructions
 1. Clone this repo
-2. Run `npm install` to locally install dependencies
+2. Modify package.json to change dependencies if desired
+3. Run `npm install` to locally install dependencies
+4. Modify now.json to change build configuration if desired
+5. Run `now dev -p 5000` to run the integration's UIHook
 
 ## Additional Links
 A test web app for integration of a Now web app running on Next.js pulling data from a Contentful CMS with the aid of our integration

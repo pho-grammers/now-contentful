@@ -4,7 +4,6 @@
   "version": "0.0.1",
   "author": "Pho-grammers {Kevin Pho (OmnInfinity) <kevinpho@mit.edu>, Teresa Pho (teresapho5) <teresathanhpho@gmail.com>}",
   "license": "MIT",
-
   "repository": {
     "type": "git",
     "url": "https://github.com/pho-grammers/now-contentful/"
@@ -13,8 +12,9 @@
     "now",
     "contentful"
   ],
-
   "dependencies": {
-    "@zeit/integration-utils": "latest"
+    "@zeit/integration-utils": "latest",
+    "global": "^4.3.2",
+    "now": "^15.3.0"
   }
 }
