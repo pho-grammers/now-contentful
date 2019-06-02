@@ -6,7 +6,7 @@ index.js
  */
 
 /*** Packages ***/
-const {withUiHook} = require("");
+const {withUiHook} = require("@zeit/integration-utils");
 
 /*** Types ***/
 let count = 0;
