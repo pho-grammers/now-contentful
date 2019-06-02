@@ -9,7 +9,7 @@ index.js
 const {withUiHook} = require("@zeit/integration-utils");
 
 /*** Types ***/
-let count = 0;
+let count = 999;
 
 module.exports = withUiHook(({payload}) => {
   count += 1;
