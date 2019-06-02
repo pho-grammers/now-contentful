@@ -18,5 +18,5 @@ module.exports = withUiHook(({payload}) => {
       <P>Counter: ${count}</P>
       <Button>Count Me</Button>
     </Page>
-    `
+    `;
 });
