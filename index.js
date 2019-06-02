@@ -23,9 +23,9 @@ module.exports = withUiHook(
     const {clientState, action} = payload;
 
     if (action === "submit") {
+      console.log("%s %s %s %s", store.secretId, store.secretKey, clientState.secretId, clientState.secretKey)
       store.secretId = clientState.secretId;
       store.secretKey = clientState.secretKey;
-      console.log("%s %s %s %s", store.secretId, store.secretKey, clientState.secretId, clientState.secretKey)
     }
 
     else if (action === "reset") {
