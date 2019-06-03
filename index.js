@@ -35,16 +35,16 @@ module.exports = withUiHook(
       <Page>
         <ProjectSwitcher />
         <Container>
-          <Input label="Space ID" name="spaceId" value=${api.spaceId || ""}/>
-          <Input label="Secret Key" name="secretKey" type="password" value=${store.secretKey || ""}/>
+          <Input label="Space ID" name="SpaceId" value=${api.spaceId || ""}/>
+          <Input label="API Key" name="Key" type="password" value=${api.Key || ""}/>
         </Container>
         <Container>
           <Button action="submit">Submit</Button>
           <Button action="reset">Reset</Button>
         </Container>
         <Container>
-          <Input label="Space ID" name="spaceId" value=${api.spaceId || ""}/>
-          <Input label="Secret Key" name="secretKey" type="password" value=${store.secretKey || ""}/>
+          <Input label="Space ID" name="SpaceId" value=${api.spaceId || ""}/>
+          <Input label="API Key" name="Key" type="password" value=${api.Key || ""}/>
         </Container>
         <Container>
           <Button action="submit">Submit</Button>
