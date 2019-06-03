@@ -6,7 +6,10 @@ When provided an API key, this integration will display the space linked to that
 // [Todo] Add rest of the sections here
 // [Todo] Add documentation
 // [Todo] Split the integration into separate development and production integrations (or just use branches in the VCS)
-// [Todo] Use an OAuth 2.0 token or Personal Access Token to access the Content Management API for write access (the developer will have to learn the API reference to modify content)
+// [Todo] Use an OAuth 2.0 token or Personal Access Token to access the Content Management API for write access (the developer will have to learn the API reference to modify content) or for access to other users
+// [Todo] Allow multiple API keys to access multiple spaces for one Now project
+// [Todo] Support GraphQL
+// [Todo] Convert to TypeScript
 
 ## Instructions
 1. Clone this repo
@@ -14,7 +17,8 @@ When provided an API key, this integration will display the space linked to that
 3. Run `npm install` to locally install dependencies
 4. Modify now.json to change build configuration if desired
 5. Run `now dev -p 5000` to run the integration's UIHook locally on a development configuration
-5. Run `now --target=production` to run the integration's UIHook remotely on a production configuration
+6. Run `now --target=production` to run the integration's UIHook remotely on a production configuration
+7. Using your Contentful account (assuming there is data created already), load the API key (only one space can be loaded per Now project as of now)
 
 [1] Note that the only working development environment this test appeared to work was on a Mac installation of Now and under the Chrome browser (and, as it appears, not  Chromium-based browsers, such as Vivaldi) due to fetch NetworkErrors
 
